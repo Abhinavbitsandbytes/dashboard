@@ -1,7 +1,5 @@
 
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body {
-    font-family: 'Poppins', sans-serif;
     background: #fafafa;
 }
 
@@ -11,12 +9,10 @@ body {
     margin-left: -250px;
 }
 
-
 }
 
 p {
-    font-family: 'Poppins', sans-serif;
-    /* font-size: 1.1em; */
+
     font-weight: 300;
     line-height: 1.7em;
     color: #999;
@@ -87,7 +83,6 @@ a:focus {
 
 #sidebar ul.components {
     padding: 20px 0;
-    border-bottom: 1px solid #47748b;
 }
 
 #sidebar ul p {
@@ -132,29 +127,8 @@ ul ul a {
     background: #6d7fcc;
 }
 
-ul.CTAs {
-    padding: 20px;
-}
 
-ul.CTAs a {
-    text-align: center;
-    font-size: 0.9em !important;
-    display: block;
-    border-radius: 5px;
-    margin-bottom: 5px;
-}
 
-a.download {
-    background: #fff;
-    color: #7386D5;
-}
-
-a.article,
-a.article:hover {
-    background: #6d7fcc !important;
-    /* color: #fff !important; */
-    color:#A9A9A9 !important;
-}
 .list-style{
     background-color: #2a2a2a;  
 }
@@ -224,13 +198,14 @@ a.article:hover {
 }
 
 .gcolor{
-    color:#0ff;
+    color:#0ff !important;;
    
 
 }
 .lg{
-    font-size: 22px !important;
+    font-size: 22px;
     margin-right: 4px;
+    color:#A9A9A9 ;
     
 }
 .nav-item{

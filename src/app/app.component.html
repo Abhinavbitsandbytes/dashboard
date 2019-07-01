@@ -1,7 +1,7 @@
 
 
 <body>
-  <div class="wrapper" style="margin-bottom: 8px">
+  <div class="wrapper">
     <!-- Sidebar  -->
     <nav id="sidebar" [ngClass]="toggle ? 'toggle2' : 'toggle3' ">
       <div class="sidebar-header">
@@ -11,23 +11,23 @@
       <ul class="list-unstyled components">
         <p></p>
         <li class="active">
-          <a href="#" style="margin-bottom: 2px"> <i class="fas fa-user-shield"></i> ADMINISTRATOR</a>
+          <a href="#" class="margin-bottom-2"> <i class="fas fa-user-shield"></i> ADMINISTRATOR</a>
         </li>
         <li>
-          <a href="#" class="list-style" style="margin-bottom: 2px"> <i class="fas fa-map-marker-alt"></i> LOCATION</a>
+          <a href="#" class="list-style margin-bottom-2" > <i class="fas fa-map-marker-alt"></i> LOCATION</a>
         </li>
 
         <li>
-          <a href="#" style="margin-bottom: 2px" class="list-style"> <i class="fas fa-tag"></i> TAG</a>
+          <a href="#"  class="list-style margin-bottom-2"> <i class="fas fa-tag"></i> TAG</a>
         </li>
         <li>
-          <a href="#" style="margin-bottom: 3px" class="list-style"> <i class="fas fa-file-medical"></i> ADD DOCUMENT</a>
+          <a href="#"  class="list-style margin-bottom-3"> <i class="fas fa-file-medical"></i> ADD DOCUMENT</a>
         </li>
         <li>
-          <a href="#" style="margin-bottom: 2px" class="list-style"> <i class="fas fa-folder-plus"></i> NEW FOLDER</a>
+          <a href="#"  class="list-style margin-bottom-2"> <i class="fas fa-folder-plus"></i> NEW FOLDER</a>
         </li>
         <li>
-          <a href="#" style="margin-bottom: 2.5px" class="list-style"> <i class="far fa-calendar-plus"></i> ADD SITE</a>
+          <a href="#"  class="list-style margin-bottom-m"> <i class="far fa-calendar-plus"></i> ADD SITE</a>
         </li>
         <li>
           <a href="#" class="list-style"> <i class="fas fa-trash-alt"></i> DELETE</a>
@@ -72,25 +72,25 @@
                 [outerStrokeColor]="'#0ff'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="300">
                
               </circle-progress>
-              <p style="margin-left: 54px">UNIQUE VISITORS</p>
+              <p class="margin-left-54">UNIQUE VISITORS</p>
             </div>
             <div class="col-md-3">  
               <circle-progress [percent]="21" [radius]="100" [outerStrokeWidth]="3" [innerStrokeWidth]="3"
                 [outerStrokeColor]="'#FF6347'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="300">
               </circle-progress>
-              <p style="margin-left: 54px">RETURNING VISITORS</p>
+              <p class="margin-left-54">RETURNING VISITORS</p>
               </div>
               <div class="col-md-3">
               <circle-progress [percent]="79" [radius]="100" [outerStrokeWidth]="3" [innerStrokeWidth]="3"
                 [outerStrokeColor]="'#0ff'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="300">
               </circle-progress>
-              <p style="margin-left: 54px">% OF NEW VISITS</p>
+              <p class="margin-left-54">% OF NEW VISITS</p>
               </div>
               <div class="col-md-3">
               <circle-progress [percent]="55" [radius]="100" [outerStrokeWidth]="3" [innerStrokeWidth]="3"
                 [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="300">
               </circle-progress>
-              <p style="margin-left: 54px">BOUNCE RATE</p>
+              <p class="margin-left-54">BOUNCE RATE</p>
         </div>
             </div>
         <div class="row container-fluid">
@@ -129,7 +129,7 @@
           <p>UNIQUE VISITORS</p>
           <p>23</p>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-1">
           <p>PAGEVIEWS</p>
           <p>662</p>
         </div>
@@ -142,21 +142,20 @@
           <p>00:07:03</p>
         </div>
         <div class="col-md-4">
-          <div style="display:block; width: 100%">
+          <div class="pie-section">
             <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType">
             </canvas>
           </div>
         </div>
       </div>
-    
     </div>
   </div>
 
 
 
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
     integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
 
 
 </body>

@@ -2,15 +2,12 @@
 body {
     background: #fafafa;
 }
-
-
 @media (max-width: 768px){
 .sidebar {
     margin-left: -250px;
 }
 
 }
-
 p {
 
     font-weight: 300;

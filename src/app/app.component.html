@@ -1,0 +1,164 @@
+
+
+<body>
+  <div class="wrapper" style="margin-bottom: 8px">
+    <!-- Sidebar  -->
+    <nav id="sidebar" [ngClass]="toggle ? 'toggle2' : 'toggle3' ">
+      <div class="sidebar-header">
+        <h6>DASHBOARD</h6>
+      </div>
+
+      <ul class="list-unstyled components">
+        <p></p>
+        <li class="active">
+          <a href="#" style="margin-bottom: 2px"> <i class="fas fa-user-shield"></i> ADMINISTRATOR</a>
+        </li>
+        <li>
+          <a href="#" class="list-style" style="margin-bottom: 2px"> <i class="fas fa-map-marker-alt"></i> LOCATION</a>
+        </li>
+
+        <li>
+          <a href="#" style="margin-bottom: 2px" class="list-style"> <i class="fas fa-tag"></i> TAG</a>
+        </li>
+        <li>
+          <a href="#" style="margin-bottom: 3px" class="list-style"> <i class="fas fa-file-medical"></i> ADD DOCUMENT</a>
+        </li>
+        <li>
+          <a href="#" style="margin-bottom: 2px" class="list-style"> <i class="fas fa-folder-plus"></i> NEW FOLDER</a>
+        </li>
+        <li>
+          <a href="#" style="margin-bottom: 2.5px" class="list-style"> <i class="far fa-calendar-plus"></i> ADD SITE</a>
+        </li>
+        <li>
+          <a href="#" class="list-style"> <i class="fas fa-trash-alt"></i> DELETE</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Page Content  -->
+    <div id="content">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+          <button type="button" (click)="toggleButton()" #sidebarCollapse id="sidebarCollapse" class="btn btnh btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+          <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button> 
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" > <span class="font-bold marginRight"> ANALYTICS </span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"> <i class="fas gcolor fa-chart-pie lg"></i> </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"> <i class="fas fa-chart-line lg"></i> </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"> <i class="far fa-calendar-plus lg"></i></a>
+              </li>
+            </ul>
+          </div>
+         
+        </div>
+      </nav>
+      <div class="row" style="text-align: center">
+          <div class="col-md-3">
+              <circle-progress [percent]="25" [radius]="100" [outerStrokeWidth]="3" [innerStrokeWidth]="3"
+                [outerStrokeColor]="'#0ff'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="300">
+               
+              </circle-progress>
+              <p style="margin-left: 54px">UNIQUE VISITORS</p>
+            </div>
+            <div class="col-md-3">  
+              <circle-progress [percent]="21" [radius]="100" [outerStrokeWidth]="3" [innerStrokeWidth]="3"
+                [outerStrokeColor]="'#FF6347'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="300">
+              </circle-progress>
+              <p style="margin-left: 54px">RETURNING VISITORS</p>
+              </div>
+              <div class="col-md-3">
+              <circle-progress [percent]="79" [radius]="100" [outerStrokeWidth]="3" [innerStrokeWidth]="3"
+                [outerStrokeColor]="'#0ff'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="300">
+              </circle-progress>
+              <p style="margin-left: 54px">% OF NEW VISITS</p>
+              </div>
+              <div class="col-md-3">
+              <circle-progress [percent]="55" [radius]="100" [outerStrokeWidth]="3" [innerStrokeWidth]="3"
+                [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="300">
+              </circle-progress>
+              <p style="margin-left: 54px">BOUNCE RATE</p>
+        </div>
+            </div>
+        <div class="row container-fluid">
+          <div class="col-md-7">
+            <circle-progress [percent]="100" [radius]="50" [outerStrokeWidth]="3" [innerStrokeWidth]="3"
+            [outerStrokeColor]="'#FF6347'" [innerStrokeColor]="'#fafafa'" [animation]="true" [animationDuration]="300">
+           
+          </circle-progress>
+         </div>
+       
+
+              <div class="col-md-5">
+                  <button type="button" class="btn btnclr btn-default">Hourly</button>
+                  <button type="button" class="btn btnclr btn-default">Day</button>
+                  <button type="button" class="btn btnclr btn-default">Week</button>
+                  <button type="button" class="btn btnclr btn-default">Month</button>
+                
+
+                    
+              </div>
+        </div>
+
+          <div style="width:80%;">
+              <canvas baseChart [chartType]="'line'" [datasets]="chartData" [labels]="chartLabels" [options]="chartOptions"
+                [legend]="true" (chartClick)="onChartClick($event)">
+              </canvas>
+            </div>
+
+      <div class="row container-fluid">
+
+        <div class="col-md-1">
+          <p>VISITS</p>
+          <p>64</p>
+        </div>
+        <div class="col-md-2">
+          <p>UNIQUE VISITORS</p>
+          <p>23</p>
+        </div>
+        <div class="col-md-2">
+          <p>PAGEVIEWS</p>
+          <p>662</p>
+        </div>
+        <div class="col-md-1">
+          <p>PAGE/VISIT</p>
+          <p>10.34</p>
+        </div>
+        <div class="col-md-2">
+          <p>AVG. VISIT DURATION</p>
+          <p>00:07:03</p>
+        </div>
+        <div class="col-md-4">
+          <div style="display:block; width: 100%">
+            <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType">
+            </canvas>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+
+
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+    integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+<router-outlet></router-outlet>

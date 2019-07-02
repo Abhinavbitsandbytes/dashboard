@@ -64,29 +64,11 @@
         </div>
       </nav>
       <div class="row" style="text-align: center">
-        <div class="col-md-3">
-          <circle-progress [percent]="25" [radius]="100" [outerStrokeWidth]="3" [innerStrokeWidth]="3"
-            [outerStrokeColor]="'#0ff'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="300">
+        <div class="col-md-3" *ngFor="let progres of progress">
+          <circle-progress percent="{{progres.percent}}" [radius]="100" [outerStrokeWidth]="3" [innerStrokeWidth]="3"
+            outerStrokeColor="{{progres.outerStrokeColor}}" innerStrokeColor="{{progres.innerStrokeColor}}" [animation]="true" [animationDuration]="300">
           </circle-progress>
-          <p>UNIQUE VISITORS</p>
-        </div>
-        <div class="col-md-3">
-          <circle-progress [percent]="21" [radius]="100" [outerStrokeWidth]="3" [innerStrokeWidth]="3"
-            [outerStrokeColor]="'#FF6347'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="300">
-          </circle-progress>
-          <p>RETURNING VISITORS</p>
-        </div>
-        <div class="col-md-3">
-          <circle-progress [percent]="79" [radius]="100" [outerStrokeWidth]="3" [innerStrokeWidth]="3"
-            [outerStrokeColor]="'#0ff'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="300">
-          </circle-progress>
-          <p>% OF NEW VISITS</p>
-        </div>
-        <div class="col-md-3">
-          <circle-progress [percent]="55" [radius]="100" [outerStrokeWidth]="3" [innerStrokeWidth]="3"
-            [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="300">
-          </circle-progress>
-          <p>BOUNCE RATE</p>
+          <p>{{progres.name}}</p>
         </div>
       </div>
       <div class="row container-fluid">

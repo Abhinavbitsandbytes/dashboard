@@ -63,4 +63,32 @@ export class AppComponent implements OnInit {
     this.toggle=!this.toggle
     console.log('dkd')
   }
+
+  progress = [
+    {
+      percent: 25,
+      outerStrokeColor: '#0ff',
+      innerStrokeColor: "#C7E596",
+      name:'UNIQUE VISITORS'
+    },
+    {
+      percent: 21,
+      outerStrokeColor: '#FF6347',
+      innerStrokeColor: "#C7E596",
+      name:'RETURNING VISITORS'
+    },
+    {
+      percent: 79,
+      outerStrokeColor: '#0ff',
+      innerStrokeColor: "#C7E596",
+      name:'% OF NEW VISITS'
+    },
+    {
+      percent: 55,
+      outerStrokeColor: '#78C000',
+      innerStrokeColor: "#C7E596",
+      name:'BOUNCE RATE'
+    },
+
+  ]
 }
